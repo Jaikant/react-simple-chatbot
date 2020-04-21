@@ -38,7 +38,7 @@ const Bubble = styled.div`
   }};
   overflow: hidden;
   position: relative;
-  padding: 12px;
+  padding: 8px 12px;
   transform: scale(0);
   transform-origin: ${props => {
     const { isFirst, user } = props;

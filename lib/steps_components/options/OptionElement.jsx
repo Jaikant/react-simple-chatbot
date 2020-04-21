@@ -5,7 +5,7 @@ const OptionElement = styled.button`
   background: ${({ theme }) => theme.botBubbleColor};
   border: 0;
   border-radius: 22px;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
   color: ${({ theme }) => theme.botFontColor};
   display: inline-block;
   font-size: 14px;

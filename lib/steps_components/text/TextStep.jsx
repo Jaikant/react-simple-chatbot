@@ -4,6 +4,7 @@ import Bubble from './Bubble';
 import Image from './Image';
 import ImageContainer from './ImageContainer';
 import Loading from '../common/Loading';
+import Linkify from 'react-linkify';
 import TextStepContainer from './TextStepContainer';
 
 class TextStep extends Component {
@@ -79,16 +80,18 @@ class TextStep extends Component {
             />
           )}
         </ImageContainer>
-        <Bubble
-          className="rsc-ts-bubble"
-          style={bubbleStyle}
-          user={user}
-          showAvatar={showAvatar}
-          isFirst={isFirst}
-          isLast={isLast}
-        >
+        <Linkify>
+          <Bubble
+            className="rsc-ts-bubble"
+            style={bubbleStyle}
+            user={user}
+            showAvatar={showAvatar}
+            isFirst={isFirst}
+            isLast={isLast}
+          >
           {loading ? <Loading /> : this.renderMessage()}
-        </Bubble>
+          </Bubble>
+        </Linkify>
       </TextStepContainer>
     );
   }

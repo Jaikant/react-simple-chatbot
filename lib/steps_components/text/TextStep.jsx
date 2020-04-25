@@ -7,6 +7,12 @@ import Loading from '../common/Loading';
 import Linkify from 'react-linkify';
 import TextStepContainer from './TextStepContainer';
 
+const componentDecorator = (href, text, key) => (
+  <a href={href} key={key} target="_blank">
+    {text}
+  </a>
+);
+
 class TextStep extends Component {
   /* istanbul ignore next */
   state = {
@@ -47,7 +53,6 @@ class TextStep extends Component {
         triggerNextStep
       });
     }
-
     return this.getMessage();
   };
 
@@ -80,7 +85,7 @@ class TextStep extends Component {
             />
           )}
         </ImageContainer>
-        <Linkify>
+        <Linkify componentDecorator={componentDecorator}>
           <Bubble
             className="rsc-ts-bubble"
             style={bubbleStyle}

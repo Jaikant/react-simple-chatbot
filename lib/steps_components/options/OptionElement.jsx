@@ -8,8 +8,9 @@ const OptionElement = styled.button`
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
   color: ${({ theme }) => theme.botFontColor};
   display: inline-block;
-  font-size: 14px;
-  padding: 12px;
+  font-size: 13px;
+  // padding: 12px;
+  padding:0.3em 1.2em;
 
   &:hover {
     opacity: 0.7;
